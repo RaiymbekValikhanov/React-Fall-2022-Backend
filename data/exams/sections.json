@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "title": "Общие положения",
+        "image": "https://otyrar.kz/wp-content/uploads/2022/08/photo-2022-08-19-17-17-44.jpg" 
+    },
+    {
+        "id": 2,
+        "title": "Дорожные знаки",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaZIWNKTLoQIXGrhhjvwCF66S9h6r8uuSUmwfYYCNemTIRSQbhIy5N9J4ZkOTRV5KMOnc&usqp=CAU"
+    },
+    {
+        "id": 3,
+        "title": "Дорожная разметка",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Kreuzung_B1-B96_Berlin_-_Fahrbahnmarkierungen.jpg"
+    },
+    {
+        "id": 4,
+        "title": "Сигналы светофора и регулировщика",
+        "image": "https://ruspdd.com/img-exam/ticket-15-question-06.jpg"
+    },
+    {
+        "id": 5,
+        "title": "Начало движения, маневрирование",
+        "image": "https://i.ytimg.com/vi/spbPe6XV4u4/maxresdefault.jpg"
+    }
+]
