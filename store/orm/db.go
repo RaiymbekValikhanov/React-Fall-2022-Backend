@@ -38,7 +38,7 @@ func (db *DB) ScoreRepository() store.ScoreRepository {
 
 func (db *DB) Connect(config *config.Config) error {
 	address := fmt.Sprintf(
-		"host=%s port=%s user=%s dbname=%s password=%s sslmode=disable",
+		"host=%s port=%s user=%s dbname=%s password=%s",
 		config.DBHost,
 		config.DBPort,
 		config.DBUser,
