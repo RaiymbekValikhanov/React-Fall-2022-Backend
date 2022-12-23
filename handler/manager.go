@@ -34,9 +34,11 @@ func (h *Handler) InitRouter() *gin.Engine {
 		SameSite: http.SameSiteNoneMode,
 		Secure: true,
 		Path: "/",
+		HttpOnly: true,
 	})
+
 	r.Use(cors.New(cors.Config{
-		AllowOrigins:     []string{"http://localhost:3000", "https://327c-2-135-65-43.ngrok.io"},
+		AllowOrigins:     []string{"http://localhost:3000", "http://192.168.1.110:3000", "https://traffic-rules.onrender.com"},
 		AllowMethods:     []string{"GET", "POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS"},
 		AllowHeaders:     []string{"Origin", "Content-Length", "Content-Type", "Set-Cookie"},
 		ExposeHeaders:    []string{"Content-Length"},
@@ -50,6 +52,7 @@ func (h *Handler) InitRouter() *gin.Engine {
 	{
 		auth.POST("/signup", h.Signup)
 		auth.POST("/signin", h.Signin)
+		auth.POST("/logout", h.LogOut)
 		auth.GET("/whoami", h.WhoAmI)
 	}
 

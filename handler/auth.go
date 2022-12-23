@@ -71,7 +71,7 @@ func (h *Handler) WhoAmI(c *gin.Context) {
 	user := session.Get("user")
 
 	if user == nil {
-		c.JSON(http.StatusUnauthorized, gin.H{"error": "no such user"})
+		c.JSON(http.StatusUnauthorized, gin.H{"error": "no such user 1"})
 		return 
 	}
 
@@ -105,4 +105,12 @@ func (h *Handler) AuthRequired() gin.HandlerFunc {
 		
 		c.Next()
 	}
+}
+
+func (h *Handler) LogOut(c *gin.Context) {
+	session := sessions.Default(c)
+	session.Set("user", nil)
+	session.Save()
+
+	c.JSON(http.StatusNoContent, nil)
 }
