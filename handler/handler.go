@@ -31,7 +31,7 @@ func (h *Handler) RuleSection(c *gin.Context) {
 	data, err := ioutil.ReadFile(h.config.RulesPath + fmt.Sprintf("%s.html", section))
 	if err != nil {
 		go h.logger.Error("read from file error")
-		c.JSON(http.StatusInternalServerError, nil)
+		c.Data(http.StatusInternalServerError, "text/html; charset=utf-8", []byte("Тут пока пусто..."))
 		return
 	}
 
@@ -50,7 +50,7 @@ func (h *Handler) Exams(c *gin.Context) {
 }
 
 func (h *Handler) ExamSection(c *gin.Context) {
-	section := "1" // c.Param("section")
+	section := c.Param("section")
 
 	data, err := ioutil.ReadFile(h.config.ExamsPath + fmt.Sprintf("%s.json", section))
 	if err != nil {
